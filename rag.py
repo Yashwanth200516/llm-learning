@@ -1,7 +1,7 @@
 from pypdf import PdfReader
 
-# document_loader.py
 
+#extract data from pdf
 def extract_text_from_pdf(pdf_path: str) -> str:
     reader=PdfReader(pdf_path)
     ans=""
@@ -12,14 +12,13 @@ def extract_text_from_pdf(pdf_path: str) -> str:
 
 res=extract_text_from_pdf("C:/Users/user/OneDrive/Desktop/llm/Coursera pg.pdf")
 
-
+#convert it to small chunks
 def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50) -> list[str]:
     words = text.split()
     chunks = []
     step = chunk_size - overlap
     start = 0
     while start < len(words):
-        # your slicing + append logic here
         chunks.append(" ".join(words[start:start+chunk_size]))
         start += step
     
