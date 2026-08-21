@@ -1,34 +1,21 @@
-from pypdf import PdfReader
+Once, in a small village surrounded by green hills,
+there lived a boy named Arjun who loved exploring the
+forest near his home. One evening, while walking through
+the trees, he found a tiny wooden box hidden beneath a rock.
+Inside was an old compass that always pointed toward something 
+other than north.
 
-# document_loader.py
+Curious, Arjun followed the compass deep into the forest. 
+After walking for hours, he discovered a small waterfall with 
+a cave behind it. Inside the cave was a wall covered with glowing 
+drawings of the village. He realized they told the story of an 
+ancient tree that protected the village from storms.
 
-def extract_text_from_pdf(pdf_path: str) -> str:
-    reader=PdfReader(pdf_path)
-    ans=""
-    for page in reader.pages:
-        ans+=page.extract_text()
+Arjun returned home and told the villagers what he had found. 
+Together, they searched for the tree and discovered it standing 
+on a hill overlooking the village. From that day onward, the 
+villagers cared for the tree and the forest.
 
-    return ans
-
-res=extract_text_from_pdf("C:/Users/user/OneDrive/Desktop/llm/Coursera pg.pdf")
-
-
-def chunk_text(text: str, chunk_size: int = 500, overlap: int = 50) -> list[str]:
-    words = text.split()
-    chunks = []
-    step = chunk_size - overlap
-    start = 0
-    while start < len(words):
-        # your slicing + append logic here
-        chunks.append(" ".join(words[start:start+chunk_size]))
-        start += step
-    
-    return chunks
-
-chunks=chunk_text(res)
-
-print(f"Total chunks: {len(chunks)}")
-for i, c in enumerate(chunks):
-    print(f"--- Chunk {i} ({len(c.split())} words) ---")
-    print(c)
-    print()
+Years later, Arjun became known as the village's greatest 
+explorer, but he always said his greatest discovery was learning 
+to respect and protect nature.
