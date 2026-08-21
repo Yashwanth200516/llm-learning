@@ -1,0 +1,4 @@
+/venv
+/llm-learning/
+.env
+__pycache__/

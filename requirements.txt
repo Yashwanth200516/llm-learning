@@ -1,0 +1,10 @@
+langchain
+langchain_community 
+pypdf
+ipykernel
+wikipedia
+notebook
+langchain_chroma
+langchain_ollama
+fastapi
+dotenv
